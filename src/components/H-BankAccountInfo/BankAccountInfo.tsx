@@ -31,7 +31,6 @@ export const BankAccountInfo: React.FC<BankAccountInfoProps> = ({
     initialValues,
     validationSchema,
     onSubmit: (values) => {
-      console.log(values);
       handleNext(values);
     },
   });

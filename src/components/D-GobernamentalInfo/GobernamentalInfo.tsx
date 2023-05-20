@@ -32,7 +32,6 @@ export const GobernamentalInfo: React.FC<GobernamentalInfoProps> = ({
     initialValues,
     validationSchema,
     onSubmit: (values) => {
-      console.log(values);
       handleNext(values);
     },
   });

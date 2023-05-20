@@ -69,7 +69,6 @@ export const PersonalInformation: React.FC<PersonalInformationProps> = ({
     initialValues,
     validationSchema,
     onSubmit: (values) => {
-      console.log(values);
       handleNext(values);
     },
   });
@@ -80,7 +79,6 @@ export const PersonalInformation: React.FC<PersonalInformationProps> = ({
       formik.setFieldValue("otherGender", "");
     }
     formik.setFieldValue("gender", event.target.value);
-    console.log(formik.values);
   };
 
   return (

@@ -111,7 +111,6 @@ export const ExtraPersonalInfo: React.FC<ExtraPersonalInfoProps> = ({
     initialValues,
     validationSchema,
     onSubmit: (values) => {
-      console.log(values);
       handleNext(values);
     },
   });
@@ -122,7 +121,6 @@ export const ExtraPersonalInfo: React.FC<ExtraPersonalInfoProps> = ({
       formik.setFieldValue("otherFoundUs", "");
     }
     formik.handleChange(event);
-    console.log(formik.values);
   };
 
   const optionalRender = () => {
@@ -323,7 +321,6 @@ export const ExtraPersonalInfo: React.FC<ExtraPersonalInfoProps> = ({
               placeholder="Write"
               multiline
               rows={6}
-              // maxRows={6}
               fullWidth
               value={formik.values.noFormalEducation}
               onChange={formik.handleChange}

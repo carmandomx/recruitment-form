@@ -9,15 +9,11 @@ import Typography from "@mui/material/Typography";
 interface HorizontalLinearStepperProps {
   steps: string[];
   activeStep: number;
-  handlePrev: () => void;
-  handleNext: () => void;
 }
 
 const HorizontalLinearStepper: React.FC<HorizontalLinearStepperProps> = ({
   steps,
   activeStep,
-  handlePrev,
-  handleNext,
 }) => {
   const [skipped, setSkipped] = React.useState(new Set<number>());
 
@@ -27,18 +23,6 @@ const HorizontalLinearStepper: React.FC<HorizontalLinearStepperProps> = ({
 
   const isStepSkipped = (step: number) => {
     return skipped.has(step);
-  };
-
-  const handleSkip = () => {
-    if (!isStepOptional(activeStep)) {
-      throw new Error("You can't skip a step that isn't optional.");
-    }
-
-    setSkipped((prevSkipped) => {
-      const newSkipped = new Set(prevSkipped.values());
-      newSkipped.add(activeStep);
-      return newSkipped;
-    });
   };
 
   return (
@@ -66,20 +50,7 @@ const HorizontalLinearStepper: React.FC<HorizontalLinearStepperProps> = ({
       </Stepper>
       <React.Fragment>
         <Typography sx={{ mt: 2, mb: 1 }}>Step {activeStep + 1}</Typography>
-        <Box sx={{ display: "flex", flexDirection: "row", pt: 2 }}>
-          {/* <Button
-            color="inherit"
-            disabled={activeStep === 0}
-            onClick={handlePrev}
-            sx={{ mr: 1 }}
-          >
-            Back
-          </Button> */}
-          <Box sx={{ flex: "1 1 auto" }} />
-          {/* <Button onClick={handleNext}>
-            {activeStep === steps.length - 1 ? "Finish" : "Next"}
-          </Button> */}
-        </Box>
+        <Box sx={{ display: "flex", flexDirection: "row", pt: 2 }}></Box>
       </React.Fragment>
     </Box>
   );

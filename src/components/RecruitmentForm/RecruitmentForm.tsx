@@ -217,7 +217,6 @@ export const RecruitmentForm = (props: Props) => {
                 <Grid item>
                   <Paper sx={{ padding: "1.2em", borderRadius: "0.5em" }}>
                     {/* Component form */}
-                    {/* {JSON.stringify(form)} */}
                     <DisplayInfo formData={form} />
                   </Paper>
                 </Grid>
@@ -235,8 +234,8 @@ export const RecruitmentForm = (props: Props) => {
       <HorizontalLinearStepper
         steps={steps}
         activeStep={currentStep}
-        handlePrev={stepperHandlePrev}
-        handleNext={stepperHandleNext}
+        // handlePrev={stepperHandlePrev}
+        // handleNext={stepperHandleNext}
       />
       {renderStep()}
     </div>

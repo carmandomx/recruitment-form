@@ -42,7 +42,6 @@ export const Skills: React.FC<SkillsProps> = ({
     initialValues,
     validationSchema,
     onSubmit: (values) => {
-      console.log(values);
       handleNext(values);
     },
   });

@@ -40,7 +40,6 @@ export const AddressInformation: React.FC<AddressInformationProps> = ({
     initialValues,
     validationSchema,
     onSubmit: (values) => {
-      console.log(values);
       handleNext(values);
     },
   });
