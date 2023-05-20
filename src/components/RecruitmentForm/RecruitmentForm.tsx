@@ -1,6 +1,5 @@
 import { Container, Grid, Paper } from "@mui/material";
 import PersonalInformation from "../A-PersonalInformation";
-import { PersonalInfo } from "../A-PersonalInformation/PersonalInformation";
 import { AddressInformation } from "../B-AddressInformation/AddressInformation";
 import { AddressExtraInfo } from "../C-AddressExtraInfo/AddressExtraInfo";
 import { GobernamentalInfo } from "../D-GobernamentalInfo/GobernamentalInfo";
@@ -8,9 +7,8 @@ import { ExtraPersonalInfo } from "../E-ExtraPersonalInfo/ExtraPersonalInfo";
 import { BankAccountInfo } from "../H-BankAccountInfo/BankAccountInfo";
 import HorizontalLinearStepper from "../HorizontalLinearStepper/HorizontalLinearStepper";
 import { Skills } from "../I-Skills/Skills";
-import { useRef, useState } from "react";
+import { useState } from "react";
 import { DisplayInfo } from "../DisplayInfo/DisplayInfo";
-import { FormGlobal } from "../../interface/FormGlobal";
 
 type Props = {};
 
@@ -27,7 +25,7 @@ const steps = [
 export const RecruitmentForm = (props: Props) => {
   const [currentStep, setCurrentStep] = useState(0);
   const [form, setForm] = useState<any>();
-  const personalInformationRef = useRef<PersonalInfo>(null);
+  // const personalInformationRef = useRef<PersonalInfo>(null);
 
   const handleNext = (values: any) => {
     setCurrentStep(currentStep + 1);
@@ -35,22 +33,22 @@ export const RecruitmentForm = (props: Props) => {
   };
   const handlePrev = () => setCurrentStep(currentStep - 1);
 
-  const stepperHandleNext = () => {
-    switch (currentStep) {
-      case 0:
-        console.log("caso 1");
-        console.log(personalInformationRef);
-        console.log(personalInformationRef.current);
-        console.log(form);
+  // const stepperHandleNext = () => {
+  //   switch (currentStep) {
+  //     case 0:
+  //       console.log("caso 1");
+  //       console.log(personalInformationRef);
+  //       console.log(personalInformationRef.current);
+  //       console.log(form);
 
-        personalInformationRef.current?.handleSubmit();
-        break;
+  //       personalInformationRef.current?.handleSubmit();
+  //       break;
 
-      default:
-        break;
-    }
-  };
-  const stepperHandlePrev = () => {};
+  //     default:
+  //       break;
+  //   }
+  // };
+  // const stepperHandlePrev = () => {};
 
   const renderStep = () => {
     switch (currentStep) {

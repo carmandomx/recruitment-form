@@ -45,8 +45,8 @@ export const AddressInformation: React.FC<AddressInformationProps> = ({
   });
 
   const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const files = e.target.files;
     // Do something with the files
+    // const files = e.target.files;
   };
 
   return (

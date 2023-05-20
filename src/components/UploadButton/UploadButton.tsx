@@ -3,8 +3,8 @@ import React from "react";
 
 export const UploadButton = () => {
   const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const files = e.target.files;
     // Do something with the files
+    // const files = e.target.files;
   };
 
   return (

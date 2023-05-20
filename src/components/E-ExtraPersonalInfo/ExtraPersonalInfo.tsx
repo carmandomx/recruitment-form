@@ -180,7 +180,7 @@ export const ExtraPersonalInfo: React.FC<ExtraPersonalInfoProps> = ({
   const handleFinishClassChange = (
     event: React.ChangeEvent<HTMLInputElement>
   ) => {
-    const finishClass = event.target.value;
+    // const finishClass = event.target.value;
 
     formik.handleChange(event);
   };
@@ -188,7 +188,7 @@ export const ExtraPersonalInfo: React.FC<ExtraPersonalInfoProps> = ({
   const handleHaveDegreeChange = (
     event: React.ChangeEvent<HTMLInputElement>
   ) => {
-    const haveDegree = event.target.value;
+    // const haveDegree = event.target.value;
 
     formik.handleChange(event);
   };
@@ -196,13 +196,13 @@ export const ExtraPersonalInfo: React.FC<ExtraPersonalInfoProps> = ({
   const handleScholarshipChange = (
     event: React.ChangeEvent<HTMLInputElement>
   ) => {
-    const scholarship = event.target.value;
+    // const scholarship = event.target.value;
 
     formik.handleChange(event);
   };
 
   const handleLicenseChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const license = event.target.value;
+    // const license = event.target.value;
 
     formik.handleChange(event);
   };
