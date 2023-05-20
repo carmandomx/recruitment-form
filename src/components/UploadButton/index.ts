@@ -1,0 +1,1 @@
+export { UploadButton as default } from './UploadButton';
