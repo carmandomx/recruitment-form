@@ -25,30 +25,12 @@ const steps = [
 export const RecruitmentForm = (props: Props) => {
   const [currentStep, setCurrentStep] = useState(0);
   const [form, setForm] = useState<any>();
-  // const personalInformationRef = useRef<PersonalInfo>(null);
 
   const handleNext = (values: any) => {
     setCurrentStep(currentStep + 1);
     setForm({ ...form, ...values });
   };
   const handlePrev = () => setCurrentStep(currentStep - 1);
-
-  // const stepperHandleNext = () => {
-  //   switch (currentStep) {
-  //     case 0:
-  //       console.log("caso 1");
-  //       console.log(personalInformationRef);
-  //       console.log(personalInformationRef.current);
-  //       console.log(form);
-
-  //       personalInformationRef.current?.handleSubmit();
-  //       break;
-
-  //     default:
-  //       break;
-  //   }
-  // };
-  // const stepperHandlePrev = () => {};
 
   const renderStep = () => {
     switch (currentStep) {
@@ -229,12 +211,7 @@ export const RecruitmentForm = (props: Props) => {
 
   return (
     <div>
-      <HorizontalLinearStepper
-        steps={steps}
-        activeStep={currentStep}
-        // handlePrev={stepperHandlePrev}
-        // handleNext={stepperHandleNext}
-      />
+      <HorizontalLinearStepper steps={steps} activeStep={currentStep} />
       {renderStep()}
     </div>
   );
