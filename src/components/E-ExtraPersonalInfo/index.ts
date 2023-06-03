@@ -1,0 +1,1 @@
+export { ExtraPersonalInfo as default } from './ExtraPersonalInfo'

@@ -1,0 +1,1 @@
+export { BankAccountInfo as default } from './BankAccountInfo';
